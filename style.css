@@ -183,7 +183,7 @@ article > div:hover {
     grid-row-start: 2;
     display: grid;
     gap: 15px;
-    grid-template-rows: repeat(2, 45%);
+    grid-template-rows: 45% 40px 45%;
 }
 
 #trending > div {
@@ -199,3 +199,18 @@ article > div:hover {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
+#trending > p {
+    align-self: end;
+    font-size: 1.5rem;
+}
+
+.people {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.attribution:hover {
+    color: red;
+} 
