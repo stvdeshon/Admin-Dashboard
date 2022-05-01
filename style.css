@@ -1,3 +1,5 @@
+/* resets */
+
 * {
     margin: 0; 
     padding: 0; 
@@ -5,19 +7,13 @@
     list-style-type: none;
 }
 
-:root {
-    --corner: 5px;
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
-html, body {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr 5fr;
-    grid-template-columns: 1fr 6fr;
-  }
-
-  button, input {
+button, input {
 	background: none;
 	color: inherit;
 	border: none;
@@ -26,84 +22,161 @@ html, body {
 	outline: inherit;
 }
 
+/* global */
+
+:root {
+    --corner: 14px;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 250px 1fr;
+    grid-template-columns: 350px 1fr;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* header styling */
+
 header {
     grid-column: 2/3;
     padding: 20px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
+    background-color: #e0f2fe;
+}
+
+.header.one {
+    display: flex;
+    align-items: flex-start;
 }
 
 .header.two {
     grid-column: 2/3;
-    border: 1px solid blueviolet;
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .header.three {
     grid-row-start: 2;
     grid-column: 1/2;
+    display: flex;
+    gap: 20px;
 }
 
 .header.four {
     grid-row: 2/3;
     grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 40px;
 }
 
 #search {
-    border: 1px solid black;
+    border: 1px solid green;
     border-radius: 18px;
     padding: 5px;
+    height: 30px;
+    width: 400px;
+    background-color: whitesmoke;
 }
 
 #search-btn {
     width: 24px;
     height: 24px;
+    margin: 4px 6px 0 0;
+    cursor: pointer;
 }
+
+.upload {
+    background-color: #4f46e5;
+    width: 100px;
+    padding: 15px;
+    border-radius: 30px;
+    color: white;
+    outline: 1px solid blanchedalmond;
+    cursor: pointer;
+}
+
+/* sidebar styling*/
 
 #sidebar {
-    background-color: rgb(121, 154, 185);
-    color: whitesmoke;
+    background-color: #a5f3fc;
+    color: black;
     font-size: 1.5rem;
     grid-row: 1/3;
-    display: flex;
-    justify-content: center;
-}
-
-#list {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin: 20% auto 60% auto;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
+#sidebar > div {
+    position: absolute;
+    top: 50px;
+}
+
+ #list { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    margin: 0 10% 60% 20%;
+}
+
+/* sidebar icon stylings */
+
+#list {
+    gap: 20px;
+}
+#list > li > * {
+    display: flex;
+    gap: 8px;
+}
+
+/* styling for main section */
+
 main {
-    background-color: grey;
+    background-color: #5eead4;
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 50px 1fr;
-    gap: 15px;
+    gap: 10px;
     padding: 20px 0 30px 0;
+    box-shadow: inset 2px 4px 9px -6px;
 }
 
 main > p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 article {
     grid-row-start: 2;
     display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(3, 30%);
-    grid-template-rows: repeat(2, 45%);
+    row-gap: 20px;
+    column-gap: 40px;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: 1fr 500px;
     margin-left: 25px;
+    margin-right: 25px;
 }
 
 article > div {
-    width: 1fr;
-    height: 1fr;
-    background-color: white;
+    position: relative;
+    width: 400px;
+    height: 340px;
     border-radius: var(--corner);
     padding: 20px;
+    background-color: #ccfbf1;
+    box-shadow: inset 4px 4px 9px -6px;
+}
+
+article > div:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
 #trending {
@@ -115,8 +188,14 @@ article > div {
 
 #trending > div {
     height: 1fr;
-    width: 80%;
-    background-color: white;
+    width: max(300px, 60%);
+    background-color: #ccfbf1;
     border-radius: var(--corner);
     padding: 20px;
+    box-shadow: inset 4px 4px 9px -6px;
 }
+
+#trending > div:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+

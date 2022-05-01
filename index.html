@@ -10,34 +10,43 @@
 <body>
     <header>
         <div class="header one">
-                <button type="search"><img src="search.png" alt="magnifying-glass" id="search-btn"></button>
+                <button type="search" for="search"><img src="search.png" alt="magnifying-glass" id="search-btn"></button>
                 <input type="search" id="search" name="search">
         </div>
-            <div class="header two">filler</div>
+            <div class="header two">
+                <img src="./icons/bell-alert-outline.png" alt="">
+                <img src="./icons/Lance.jpg" style="height: 60px; border-radius: 50px;" alt="">
+                <h1>Lance the Bulldog</h1>
+            </div>
         <div class="header three">
-                Hi, this is filler text for my header.
+                <img src="./icons/Lance.jpg" style="height: 60px; border-radius: 50px;" alt="">
+                <div>
+                    <p>Hi there,</p>
+                    <h1>Lance the Bulldog (@Lance)</h1>
+                </div>
         </div>
         <div class="header four">
-            <label for="new">New</label>
-            <input type="button" id="new" name="new">
-            <label for="upload">Upload</label>
-            <input type="button" id="upload" name="upload">
-            <label for="share">Share</label>
-            <input type="button" id="share" name="share">
+            <button class="upload">New</button>
+            <button class="upload">Upload</button>
+            <button class="upload">Share</button>
         </div>
     </header>
     <div id="sidebar">
-            <ul id="list"><li>Home</li>
-            <li>Profile</li>
-            <li>Messages</li>
-            <li>History</li>
-            <li>Tasks</li>
-            <li>Communities</li>
+        <ul id="list">
+            <li><a href="#" id="logo"><img src="./icons/select-inverse.svg">Logo</a></li>
             <br>
-            <li>Settings</li>
-            <li>Support</li>
-            <li>Privacy</li></ul>
-    </div>
+            <li><a href="#" id="home"><img src="./icons/castle.svg">Home</a></li>
+            <li><a href="#" id="profile"><img src="./icons/badge-account-horizontal-outline.svg"> Profile</a></li>
+            <li><a href="#" id="messages"><img src="./icons/icons8-speech-bubble.svg">Messages</a></li>
+            <li><a href="#" id="history"><img src="./icons/fingerprint.svg">History</a></li>
+            <li><a href="#" id="tasks"><img src="./icons/file-edit-outline.svg">Tasks</a></li>
+            <li><a href="#" id="communities"><img src="./icons/human-female-dance.svg">Communities</a></li>
+            <br>
+            <li><a href="#" id="settings"><img src="./icons/cog.svg">Settings</a></li>
+            <li><a href="#" id="support"><img src="./icons/head-question-outline.svg">Support</a></li>
+            <li><a href="#" id="privacy"><img src="./icons/shield-half-full.svg">Privacy</a></li>
+        </ul>
+</div>
     <main>
         <p style="margin-left: 25px;">Your Projects</p>
         <p>Announcements</p>
@@ -74,10 +83,8 @@
                     love. Let the root of love be within you and let nothing come out unless it is good.</p>
             </div>
         </article>
-        
         <div id="trending">
             <div>filler</div>
-            <!-- <p>Trending</p> -->
             <div id="second">filler</div>
         </div>
     </main>
